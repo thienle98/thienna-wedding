@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation | Lê Thanh Thiên & Ngô Thị Ly Na</title>
+    <meta
+      name="description"
+      content="Thiệp mời cưới online của Lê Thanh Thiên và Ngô Thị Ly Na"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-floral bg-floral--tl" aria-hidden="true"></div>
+    <div class="bg-floral bg-floral--tr" aria-hidden="true"></div>
+    <div class="bg-floral bg-floral--bl" aria-hidden="true"></div>
+    <div class="bg-floral bg-floral--br" aria-hidden="true"></div>
+    <div id="petal-layer" aria-hidden="true"></div>
+
+    <header id="cover" class="cover">
+      <div class="cover-inner">
+        <article class="envelope" id="envelope">
+          <span class="floral floral-corner cover-floral-tl" aria-hidden="true"></span>
+          <span class="floral floral-corner cover-floral-br" aria-hidden="true"></span>
+          <p class="overline">Wedding Invitation</p>
+          <h1 class="script-names" id="coverNames"></h1>
+          <p class="cover-date" id="coverDate"></p>
+          <span class="floral floral-soft cover-petal-1" aria-hidden="true"></span>
+          <span class="floral floral-soft cover-petal-2" aria-hidden="true"></span>
+          <button id="openInvitation" class="btn btn-open" type="button">Mở thiệp</button>
+        </article>
+      </div>
+    </header>
+
+    <main id="mainContent" class="main is-hidden" aria-hidden="true">
+      <section class="section reveal" id="coupleIntro">
+        <div class="container">
+          <span class="floral floral-soft couple-floral-left" aria-hidden="true"></span>
+          <span class="floral floral-soft couple-floral-right" aria-hidden="true"></span>
+          <span class="floral floral-divider couple-divider-floral" aria-hidden="true"></span>
+          <div class="couple-grid" id="coupleGrid"></div>
+        </div>
+      </section>
+
+      <section class="section section-soft reveal" id="invitationTextSection">
+        <div class="container prose-center">
+          <span class="floral floral-soft invitation-floral-corner" aria-hidden="true"></span>
+          <p class="overline">Trân trọng kính mời</p>
+          <h2 class="section-title">Sự hiện diện của Quý vị là niềm vinh hạnh</h2>
+          <span class="floral floral-divider invitation-divider-floral" aria-hidden="true"></span>
+          <div class="ornament" aria-hidden="true"></div>
+          <p id="invitationText" class="invitation-text"></p>
+        </div>
+      </section>
+
+      <section class="section reveal" id="calendarSection">
+        <div class="container calendar-layout">
+          <article class="calendar-card">
+            <span class="floral floral-soft calendar-floral-corner" aria-hidden="true"></span>
+            <p class="calendar-month" id="calendarMonthYear"></p>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </article>
+          <article class="event-info" id="eventInfo"></article>
+        </div>
+      </section>
+
+      <section class="section section-soft reveal" id="venueSection">
+        <div class="container prose-center">
+          <h2 class="section-title">Địa điểm</h2>
+          <div class="location-icon" aria-hidden="true"></div>
+          <p class="venue-name" id="venueName"></p>
+          <p class="venue-address" id="venueAddress"></p>
+          <a id="mapButton2" class="btn" target="_blank" rel="noopener">Mở bản đồ</a>
+        </div>
+      </section>
+
+      <section class="section reveal" id="scheduleSection">
+        <div class="container">
+          <h2 class="section-title center">Lịch trình hôn lễ</h2>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <section class="section section-soft reveal" id="gallerySection">
+        <div class="container">
+          <h2 class="section-title center">Album kỷ niệm</h2>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="wishesSection">
+        <div class="container wishes-layout">
+          <article>
+            <span class="floral floral-soft wishes-form-floral" aria-hidden="true"></span>
+            <h2 class="section-title">Gửi lời chúc</h2>
+            <form id="wishForm" class="wish-form">
+              <label>
+                Tên của bạn
+                <input name="name" type="text" maxlength="50" required />
+              </label>
+              <label>
+                Lời chúc
+                <textarea name="message" rows="4" maxlength="300" required></textarea>
+              </label>
+              <button class="btn" type="submit">Gửi lời chúc</button>
+            </form>
+          </article>
+          <article>
+            <h3 class="sub-title">Lời chúc thân thương</h3>
+            <div id="wishList" class="wish-list"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer reveal">
+      <div class="container prose-center">
+        <p>Xin chân thành cảm ơn</p>
+        <p class="script-names small" id="footerNames"></p>
+        <p id="footerDate"></p>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

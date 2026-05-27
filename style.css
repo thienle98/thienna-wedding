@@ -1,0 +1,1301 @@
+﻿:root {
+  --wine-950: #3f0d19;
+  --wine-900: #571526;
+  --wine-700: #7f233a;
+  --rose-500: #bf556a;
+  --rose-400: #d57f92;
+  --champagne-100: #fff8ef;
+  --champagne-200: #f8ebdb;
+  --ivory: #fffdf8;
+  --ink: #442a33;
+  --line: rgba(117, 38, 57, 0.14);
+  --mist: rgba(255, 246, 238, 0.78);
+  --soft-shadow: 0 18px 45px rgba(86, 22, 39, 0.1);
+  --paper-surface: linear-gradient(152deg, rgba(255, 252, 247, 0.9), rgba(255, 243, 234, 0.76));
+  --ease-romantic: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Be Vietnam Pro", "Inter", sans-serif;
+  color: var(--ink);
+  line-height: 1.68;
+  overflow-x: hidden;
+  background:
+    radial-gradient(1200px 540px at 0% -10%, rgba(170, 38, 68, 0.2), transparent 58%),
+    radial-gradient(1000px 540px at 100% 0%, rgba(206, 111, 132, 0.18), transparent 58%),
+    radial-gradient(1100px 800px at 50% 115%, rgba(238, 204, 185, 0.4), transparent 62%),
+    linear-gradient(160deg, #fffdf9 0%, #fff7f2 42%, #fffdf8 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 38%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(135, 60, 76, 0.025) 0,
+      rgba(135, 60, 76, 0.025) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  z-index: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, 1120px);
+  margin-inline: auto;
+}
+
+.floral {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0 6px 10px rgba(112, 25, 44, 0.12)) saturate(1.06);
+  mix-blend-mode: darken;
+}
+
+.floral-corner {
+  width: clamp(82px, 14vw, 170px);
+  aspect-ratio: 1;
+  opacity: 0.72;
+}
+
+.floral-soft {
+  width: clamp(66px, 10vw, 130px);
+  aspect-ratio: 1;
+  opacity: 0.45;
+}
+
+.floral-divider {
+  width: clamp(130px, 26vw, 300px);
+  height: clamp(26px, 4vw, 46px);
+  opacity: 0.62;
+}
+
+.section {
+  padding: clamp(58px, 7vw, 112px) 0;
+  position: relative;
+  z-index: 3;
+}
+
+.section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: clamp(96px, 15vw, 170px);
+  height: 16px;
+  translate: -50% 0;
+  background:
+    radial-gradient(circle at 50% 2px, rgba(179, 66, 95, 0.32) 0 2px, transparent 3px),
+    linear-gradient(90deg, transparent, rgba(170, 57, 86, 0.3), transparent);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.section-soft::before {
+  content: "";
+  position: absolute;
+  inset: 16px 12px;
+  border-radius: 36px;
+  background:
+    linear-gradient(165deg, rgba(255, 250, 244, 0.8), rgba(255, 242, 233, 0.68)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(139, 57, 77, 0.018) 0,
+      rgba(139, 57, 77, 0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  border: 1px solid rgba(190, 110, 129, 0.09);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+  z-index: -1;
+}
+
+.section-soft::after {
+  content: "";
+  position: absolute;
+  width: clamp(100px, 14vw, 170px);
+  aspect-ratio: 1;
+  right: clamp(8px, 2.4vw, 28px);
+  top: clamp(8px, 2vw, 22px);
+  background:
+    url("assets/flower-cluster-1.png") center/contain no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(185, 56, 89, 0.28), transparent 68%);
+  opacity: 0.36;
+  pointer-events: none;
+  z-index: -1;
+}
+
+main::before,
+main::after {
+  content: "";
+  position: fixed;
+  width: clamp(120px, 18vw, 240px);
+  aspect-ratio: 1;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.32;
+  mix-blend-mode: multiply;
+}
+
+main::before {
+  left: -28px;
+  top: 26%;
+  background:
+    radial-gradient(circle at 36% 34%, rgba(191, 68, 99, 0.46), transparent 36%),
+    radial-gradient(circle at 64% 38%, rgba(173, 39, 73, 0.42), transparent 38%),
+    radial-gradient(circle at 50% 70%, rgba(229, 141, 163, 0.4), transparent 44%);
+}
+
+main::after {
+  right: -34px;
+  bottom: 18%;
+  background:
+    radial-gradient(circle at 58% 34%, rgba(182, 52, 84, 0.44), transparent 37%),
+    radial-gradient(circle at 32% 48%, rgba(208, 102, 128, 0.39), transparent 40%),
+    radial-gradient(circle at 54% 72%, rgba(240, 169, 185, 0.38), transparent 45%);
+}
+
+#invitationTextSection .ornament::before,
+#invitationTextSection .ornament::after {
+  content: "❦";
+  position: absolute;
+  top: -9px;
+  font-size: 0.95rem;
+  color: rgba(170, 58, 88, 0.68);
+}
+
+#invitationTextSection .ornament::before {
+  left: 10px;
+  transform: scaleX(-1) rotate(-5deg);
+}
+
+#invitationTextSection .ornament::after {
+  right: 10px;
+  transform: rotate(5deg);
+}
+
+#coupleIntro .container,
+#calendarSection .container,
+#invitationTextSection .container {
+  position: relative;
+}
+
+#coupleIntro .container::before,
+#calendarSection .container::after,
+#invitationTextSection .container::before {
+  content: "";
+  position: absolute;
+  width: clamp(90px, 14vw, 160px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: 0.38;
+}
+
+#coupleIntro .container::before {
+  left: -14px;
+  bottom: -10px;
+  background:
+    url("assets/flower-cluster-1.png") center/contain no-repeat,
+    radial-gradient(circle at 55% 50%, rgba(185, 56, 89, 0.3), transparent 66%);
+}
+
+#calendarSection .container::after {
+  right: -10px;
+  bottom: -8px;
+  background:
+    url("assets/flower-cluster-2.png") center/contain no-repeat,
+    radial-gradient(circle at 50% 54%, rgba(188, 63, 94, 0.28), transparent 68%);
+}
+
+#invitationTextSection .container::before {
+  right: 2%;
+  top: 4%;
+  background:
+    url("assets/flower-cluster-3.png") center/contain no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(175, 46, 79, 0.24), transparent 70%);
+}
+
+.prose-center,
+.center {
+  text-align: center;
+}
+
+.overline {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: clamp(0.72rem, 1.5vw, 0.86rem);
+  color: rgba(165, 59, 82, 0.86);
+  margin: 0;
+}
+
+.section-title {
+  font-family: "Playfair Display", "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.5vw, 3.15rem);
+  line-height: 1.12;
+  margin: 10px 0 16px;
+  color: var(--wine-900);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.sub-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 2.7vw, 2.3rem);
+  margin: 0 0 12px;
+  color: var(--wine-900);
+}
+
+.script-names {
+  font-family: "Great Vibes", "Cormorant Garamond", "Playfair Display", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(2.4rem, 7.8vw, 5.1rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  margin: 10px 0;
+  color: var(--wine-950);
+  text-shadow: 0 1px 0 rgba(255, 240, 238, 0.8);
+}
+
+.script-names.small {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.cover-name-line {
+  display: block;
+  font-size: clamp(2.2rem, 6.3vw, 3.8rem);
+}
+
+.cover-amp {
+  display: block;
+  margin: 6px 0;
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-size: clamp(1.35rem, 3.4vw, 2.1rem);
+  font-style: italic;
+  color: rgba(158, 54, 79, 0.8);
+}
+
+.cover {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  position: relative;
+  z-index: 5;
+}
+
+.cover-inner {
+  width: min(100%, 880px);
+}
+
+.envelope {
+  text-align: center;
+  padding: clamp(42px, 7vw, 82px) clamp(24px, 6vw, 76px);
+  border-radius: 34px;
+  border: 1px solid rgba(144, 59, 81, 0.14);
+  box-shadow: 0 18px 42px rgba(98, 31, 50, 0.11);
+  background:
+    linear-gradient(140deg, rgba(255, 254, 250, 0.94), rgba(255, 245, 236, 0.92)),
+    url("assets/envelope-bg.jpg") center/cover no-repeat;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 900ms var(--ease-romantic), opacity 700ms var(--ease-romantic), filter 700ms var(--ease-romantic);
+}
+
+.envelope > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-floral-tl {
+  top: -14px;
+  left: -22px;
+  background-image:
+    url("assets/florals/flower-corner-top-left.png"),
+    radial-gradient(circle at 48% 48%, rgba(181, 52, 80, 0.28), transparent 66%);
+  animation: floral-float 11s ease-in-out infinite;
+}
+
+.cover-floral-br {
+  right: -18px;
+  bottom: -18px;
+  transform: scaleX(-1);
+  background-image:
+    url("assets/florals/flower-corner-bottom-right.png"),
+    radial-gradient(circle at 48% 48%, rgba(170, 46, 74, 0.26), transparent 66%);
+  animation: floral-float 13s ease-in-out infinite reverse;
+}
+
+.cover-petal-1 {
+  left: 30%;
+  bottom: 62px;
+  width: clamp(22px, 2.8vw, 34px);
+  background-image:
+    url("assets/florals/petal.png"),
+    radial-gradient(circle at 45% 40%, rgba(205, 90, 121, 0.66), rgba(149, 34, 62, 0.1));
+  opacity: 0.65;
+}
+
+.cover-petal-2 {
+  right: 31%;
+  bottom: 56px;
+  width: clamp(18px, 2.6vw, 30px);
+  background-image:
+    url("assets/florals/petal.png"),
+    radial-gradient(circle at 45% 40%, rgba(202, 83, 115, 0.6), rgba(152, 31, 59, 0.1));
+  opacity: 0.58;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(201, 124, 142, 0.2);
+  pointer-events: none;
+}
+
+.envelope::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% 22% -10%;
+  height: 70px;
+  background: radial-gradient(60% 100% at 50% 0%, rgba(170, 34, 64, 0.11), transparent 72%);
+  pointer-events: none;
+}
+
+.envelope .overline {
+  margin-bottom: 2px;
+}
+
+.envelope .script-names {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+.envelope .script-names::before,
+.envelope .script-names::after {
+  content: "";
+  position: absolute;
+  width: clamp(72px, 12vw, 108px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.envelope .script-names::before {
+  left: -46px;
+  top: -10px;
+  background-image: url("assets/flower-cluster-2.png");
+}
+
+.envelope .script-names::after {
+  right: -48px;
+  bottom: -8px;
+  transform: scaleX(-1);
+  background-image: url("assets/flower-cluster-3.png");
+}
+
+.cover-date {
+  margin: 0 0 26px;
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+  color: rgba(99, 41, 56, 0.9);
+}
+
+.btn {
+  border: 1px solid rgba(126, 35, 56, 0.32);
+  background: linear-gradient(140deg, #8d203a, #b7415d 60%, #cb7388);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 350ms var(--ease-romantic), box-shadow 350ms var(--ease-romantic), filter 350ms var(--ease-romantic);
+  box-shadow: 0 8px 18px rgba(120, 30, 47, 0.16);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(120, 30, 47, 0.24);
+  filter: saturate(1.08);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-open {
+  position: relative;
+  overflow: hidden;
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  letter-spacing: 0.06em;
+  padding: 12px 32px;
+}
+
+.btn-open::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 236, 241, 0.48) 48%, transparent 100%);
+  transform: translateX(-130%);
+  transition: transform 850ms var(--ease-romantic);
+}
+
+.btn-open:hover::before {
+  transform: translateX(130%);
+}
+
+.main {
+  opacity: 1;
+  transition: opacity 700ms var(--ease-romantic);
+  position: relative;
+  z-index: 4;
+}
+
+.main.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cover.is-leaving .envelope {
+  transform: translateY(-24px) scale(0.95);
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.bg-floral {
+  position: fixed;
+  width: clamp(170px, 30vw, 440px);
+  aspect-ratio: 1;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.78;
+  mix-blend-mode: darken;
+  filter: saturate(1.12) drop-shadow(0 10px 18px rgba(122, 37, 58, 0.08));
+}
+
+.bg-floral::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  background: radial-gradient(circle at 50% 45%, rgba(186, 43, 74, 0.22), transparent 65%);
+  z-index: -1;
+}
+
+.bg-floral--tl {
+  top: -72px;
+  left: -66px;
+  background-image: url("assets/flower-cluster-1.png");
+}
+
+.bg-floral--tr {
+  top: -66px;
+  right: -64px;
+  transform: scaleX(-1) rotate(-4deg);
+  background-image: url("assets/flower-cluster-2.png");
+}
+
+.bg-floral--bl {
+  bottom: -64px;
+  left: -52px;
+  transform: rotate(-5deg);
+  background-image: url("assets/flower-cluster-3.png");
+}
+
+.bg-floral--br {
+  bottom: -64px;
+  right: -52px;
+  transform: scaleX(-1) rotate(-6deg);
+  background-image: url("assets/flower-cluster-1.png");
+}
+
+#petal-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 12;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 28px;
+  background:
+    url("assets/petal.png") center/100% 100% no-repeat,
+    radial-gradient(120% 115% at 26% 20%, #ffe0e5 0%, #cf4b6a 58%, #8d2340 100%);
+  opacity: 0.66;
+  filter: drop-shadow(0 5px 6px rgba(121, 28, 47, 0.18));
+  clip-path: polygon(48% 0%, 73% 14%, 93% 42%, 82% 76%, 50% 100%, 17% 77%, 7% 43%, 25% 14%);
+  animation: petal-drift linear infinite;
+}
+
+.petal::before {
+  content: "";
+  position: absolute;
+  inset: 12% 28% 24% 28%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 241, 244, 0.7), rgba(255, 203, 215, 0));
+  transform: rotate(10deg);
+  opacity: 0.8;
+}
+
+.petal::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 70%;
+  left: 48%;
+  top: 16%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 227, 235, 0.9), rgba(121, 26, 47, 0.24));
+  opacity: 0.58;
+}
+
+.petal.burst {
+  animation: burst-flight 1.25s var(--ease-romantic) forwards;
+}
+
+@keyframes petal-drift {
+  0% {
+    transform: translate3d(var(--x1), var(--y1), 0) rotate(var(--r1)) scale(0.72);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.36;
+  }
+  45% {
+    transform: translate3d(calc((var(--x1) + var(--x2)) / 2 + var(--xs)), calc((var(--y1) + var(--y2)) / 2 + var(--ys)), 0) rotate(calc((var(--r1) + var(--r2)) / 2));
+    opacity: 0.32;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate3d(var(--x2), var(--y2), 0) rotate(var(--r2)) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes burst-flight {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.7) rotate(0deg);
+  }
+  15% {
+    opacity: 0.92;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--bx), var(--by), 0) scale(0.9) rotate(var(--br));
+  }
+}
+
+.couple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  align-items: center;
+  max-width: 980px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.couple-floral-left {
+  left: -22px;
+  top: 10%;
+  background-image:
+    url("assets/florals/flower-side-left.png"),
+    radial-gradient(circle at 50% 40%, rgba(185, 57, 88, 0.26), transparent 68%);
+  animation: floral-float 12s ease-in-out infinite;
+}
+
+.couple-floral-right {
+  right: -22px;
+  bottom: 10%;
+  background-image:
+    url("assets/florals/flower-side-right.png"),
+    radial-gradient(circle at 50% 40%, rgba(185, 57, 88, 0.26), transparent 68%);
+  animation: floral-float 9s ease-in-out infinite reverse;
+}
+
+.couple-divider-floral {
+  left: 50%;
+  top: 49%;
+  translate: -50% -50%;
+  background-image:
+    url("assets/florals/flower-divider.png"),
+    linear-gradient(90deg, transparent, rgba(157, 44, 71, 0.25), transparent);
+}
+
+.couple-grid::before {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(155, 49, 74, 0.34), transparent);
+  pointer-events: none;
+}
+
+.couple-grid::after {
+  content: "";
+  position: absolute;
+  width: clamp(120px, 20vw, 210px);
+  aspect-ratio: 1;
+  right: -6%;
+  top: -8%;
+  background:
+    url("assets/flower-cluster-2.png") center/contain no-repeat,
+    radial-gradient(circle at 52% 48%, rgba(186, 50, 80, 0.26), transparent 64%);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.person-photo-wrap {
+  width: 100%;
+}
+
+.person-photo {
+  width: min(290px, 74vw);
+  aspect-ratio: 3 / 4;
+  margin-inline: auto;
+  border-radius: 50% / 38%;
+  border: 1px solid rgba(145, 46, 70, 0.18);
+  background: linear-gradient(145deg, rgba(159, 34, 62, 0.14), rgba(255, 239, 227, 0.94));
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(102, 24, 41, 0.12);
+  position: relative;
+}
+
+.person-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(115, 22, 46, 0.12));
+  pointer-events: none;
+}
+
+.person-name {
+  margin: 2px 0 0;
+  font-family: "Great Vibes", "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  font-style: normal;
+  line-height: 1.08;
+  color: var(--wine-900);
+}
+
+.person-info {
+  width: 100%;
+  padding: clamp(8px, 1.7vw, 16px);
+  background: var(--paper-surface);
+  border: 1px solid rgba(164, 71, 95, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 8px 22px rgba(102, 24, 41, 0.06);
+}
+
+.person-role {
+  margin: 0;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: clamp(0.68rem, 1.3vw, 0.78rem);
+  color: rgba(160, 59, 82, 0.8);
+}
+
+.row1-photo .person-photo,
+.row2-photo .person-photo {
+  width: min(290px, 100%);
+}
+
+.row1-photo {
+  justify-self: start;
+}
+
+.row1-info {
+  justify-self: start;
+  text-align: left;
+  transform: translateX(-12px);
+}
+
+.row2-info {
+  justify-self: start;
+  text-align: left;
+  transform: translateX(8px);
+}
+
+.row2-photo {
+  justify-self: end;
+}
+
+.ornament {
+  width: 150px;
+  height: 1px;
+  margin: 16px auto 24px;
+  background: linear-gradient(90deg, transparent, rgba(140, 36, 56, 0.56), transparent);
+  position: relative;
+}
+
+.ornament::after {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: -11px;
+  translate: -50% 0;
+  font-size: 0.8rem;
+  color: rgba(156, 58, 82, 0.75);
+}
+
+.invitation-text {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.1vw, 1.17rem);
+}
+
+.invitation-floral-corner {
+  top: 10px;
+  right: 20px;
+  width: clamp(76px, 10vw, 122px);
+  background-image:
+    url("assets/florals/flower-corner-top-left.png"),
+    radial-gradient(circle at 50% 50%, rgba(179, 54, 84, 0.24), transparent 70%);
+  opacity: 0.4;
+}
+
+.invitation-divider-floral {
+  left: 50%;
+  top: 98px;
+  translate: -50% 0;
+  background-image:
+    url("assets/florals/flower-divider.png"),
+    linear-gradient(90deg, transparent, rgba(164, 50, 79, 0.26), transparent);
+}
+
+.calendar-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.calendar-card,
+.event-info,
+.wishes-layout > article {
+  border-radius: 24px;
+  border: 1px solid rgba(166, 77, 100, 0.1);
+  background: var(--paper-surface);
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: 0 10px 28px rgba(95, 24, 44, 0.06);
+}
+
+.calendar-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-floral-corner {
+  right: -4px;
+  top: -8px;
+  width: clamp(78px, 10vw, 124px);
+  background-image:
+    url("assets/florals/flower-corner-top-left.png"),
+    radial-gradient(circle at 50% 50%, rgba(182, 58, 90, 0.2), transparent 70%);
+  opacity: 0.46;
+}
+
+.calendar-card::before {
+  content: "";
+  position: absolute;
+  width: clamp(120px, 16vw, 180px);
+  aspect-ratio: 1;
+  left: -24px;
+  top: -22px;
+  background:
+    url("assets/flower-cluster-3.png") center/contain no-repeat,
+    radial-gradient(circle at 50% 50%, rgba(193, 73, 106, 0.2), transparent 70%);
+  opacity: 0.34;
+  pointer-events: none;
+}
+
+.calendar-month {
+  text-align: center;
+  font-family: "Cormorant Garamond", "Playfair Display", serif;
+  font-style: italic;
+  margin: 0 0 18px;
+  color: var(--wine-900);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: clamp(8px, 1.4vw, 14px);
+  font-size: clamp(0.96rem, 1.4vw, 1.12rem);
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.cal-cell {
+  text-align: center;
+  padding: clamp(8px, 1.1vw, 12px) 0;
+  border-radius: 999px;
+}
+
+.cal-head {
+  color: #8f5161;
+  font-weight: 500;
+  font-size: 0.77rem;
+}
+
+.cal-day.is-wedding {
+  color: #8a213b;
+  position: relative;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.cal-day.is-wedding::before {
+  content: "♥";
+  position: absolute;
+  inset: -34px -22px;
+  color: rgba(196, 67, 102, 0.24);
+  display: grid;
+  place-items: center;
+  font-size: clamp(3.8rem, 6vw, 5.3rem);
+  line-height: 1;
+  transform: rotate(-11deg);
+  text-shadow: -1px 2px 0 rgba(168, 47, 80, 0.28);
+  pointer-events: none;
+}
+
+.cal-day.is-wedding::after {
+  content: "♥";
+  position: absolute;
+  inset: -34px -22px;
+  display: grid;
+  place-items: center;
+  font-size: clamp(3.7rem, 5.8vw, 5.1rem);
+  color: transparent;
+  transform: rotate(-9deg);
+  -webkit-text-stroke: 1.8px rgba(176, 56, 87, 0.7);
+}
+
+.event-info p {
+  margin: 0 0 10px;
+}
+
+.event-info strong {
+  color: var(--wine-900);
+}
+
+.venue-name {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  margin-bottom: 6px;
+  color: var(--wine-900);
+}
+
+.venue-address {
+  margin: 0 0 20px;
+  color: #6c4654;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-item {
+  border: 1px solid rgba(153, 66, 88, 0.1);
+  border-radius: 18px;
+  padding: 14px 16px;
+  background: linear-gradient(165deg, rgba(255, 252, 247, 0.9), rgba(255, 244, 235, 0.74));
+}
+
+.timeline-item .time {
+  font-weight: 600;
+  color: var(--wine-900);
+}
+
+.timeline-item h3 {
+  margin: 4px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 1.18rem;
+  color: var(--wine-900);
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6d4a57;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(156, 70, 92, 0.1);
+  background: linear-gradient(145deg, rgba(151, 31, 57, 0.24), rgba(255, 237, 224, 0.88));
+}
+
+.gallery-item img,
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wishes-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.wish-form {
+  display: grid;
+  gap: 12px;
+}
+
+.wish-form label {
+  display: grid;
+  gap: 7px;
+  font-size: 0.95rem;
+  color: rgba(84, 49, 60, 0.95);
+}
+
+.wish-form input,
+.wish-form textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(121, 30, 48, 0.14);
+  padding: 11px 12px;
+  font: inherit;
+  color: inherit;
+  background: rgba(255, 251, 246, 0.9);
+}
+
+.wish-form input:focus,
+.wish-form textarea:focus {
+  outline: 2px solid rgba(185, 62, 90, 0.2);
+}
+
+.wish-list {
+  display: grid;
+  gap: 12px;
+  max-height: 420px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.wish-item {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(145, 56, 79, 0.09);
+  background: linear-gradient(162deg, rgba(255, 251, 246, 0.95), rgba(255, 242, 233, 0.92));
+  position: relative;
+  box-shadow: 0 6px 18px rgba(103, 27, 44, 0.05);
+}
+
+.wish-item::before {
+  content: "❦";
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 0.85rem;
+  color: rgba(173, 58, 88, 0.5);
+}
+
+.wishes-layout > article:first-child {
+  position: relative;
+}
+
+.wishes-form-floral {
+  top: -10px;
+  right: -8px;
+  background-image:
+    url("assets/florals/flower-corner-top-left.png"),
+    radial-gradient(circle at 50% 50%, rgba(182, 58, 90, 0.23), transparent 68%);
+  opacity: 0.5;
+}
+
+@keyframes floral-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.wish-item h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: var(--wine-900);
+}
+
+.wish-item p {
+  margin: 0;
+  color: #704d59;
+  font-size: 0.95rem;
+}
+
+.footer {
+  padding: 22px 0 42px;
+  position: relative;
+  z-index: 4;
+}
+
+.footer p {
+  margin: 0.2rem 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  filter: blur(4px);
+  transition: opacity 1000ms var(--ease-romantic), transform 1000ms var(--ease-romantic), filter 1000ms var(--ease-romantic);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.location-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(143, 41, 63, 0.45);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  margin: 0 auto 14px;
+  position: relative;
+}
+
+.location-icon::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(143, 41, 63, 0.55);
+  position: absolute;
+  left: 9px;
+  top: 9px;
+}
+
+@media (min-width: 760px) {
+  .couple-grid {
+    gap: 14px clamp(18px, 2.4vw, 34px);
+  }
+
+  .timeline {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 28px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(133, 38, 58, 0.3), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-top: 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .wishes-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 104px 0;
+  }
+
+  .section-soft::before {
+    inset: 24px min(6vw, 58px);
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: min(100% - 30px, 1120px);
+  }
+
+  .cover {
+    padding: 14px;
+  }
+
+  .envelope {
+    border-radius: 24px;
+    padding: 34px 18px 36px;
+  }
+
+  .section {
+    padding: 54px 0;
+  }
+
+  .section-soft::before {
+    inset: 10px 6px;
+    border-radius: 22px;
+  }
+
+  .section::after {
+    opacity: 0.34;
+  }
+
+  .bg-floral {
+    width: 136px;
+    opacity: 0.6;
+  }
+
+  .bg-floral--tl {
+    top: -44px;
+    left: -50px;
+  }
+
+  .bg-floral--tr {
+    top: -44px;
+    right: -48px;
+  }
+
+  .bg-floral--bl {
+    bottom: -42px;
+    left: -44px;
+  }
+
+  .bg-floral--br {
+    bottom: -42px;
+    right: -44px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .floral-corner {
+    width: clamp(64px, 20vw, 96px);
+  }
+
+  .floral-soft {
+    width: clamp(44px, 14vw, 70px);
+    opacity: 0.34;
+  }
+
+  .floral-divider {
+    width: clamp(112px, 42vw, 172px);
+    opacity: 0.5;
+  }
+
+  .couple-grid {
+    gap: 8px;
+  }
+
+  .couple-grid::before {
+    left: 8%;
+    right: 8%;
+  }
+
+  .couple-grid::after {
+    opacity: 0.28;
+    right: -10%;
+    top: -12%;
+  }
+
+  .row1-info,
+  .row2-info {
+    transform: none;
+  }
+
+  .person-name {
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+  }
+
+  .couple-divider-floral {
+    top: 50%;
+  }
+
+  .calendar-card,
+  .event-info,
+  .wishes-layout > article {
+    border-radius: 19px;
+    padding: 15px;
+  }
+
+  .calendar-grid {
+    gap: 7px;
+  }
+
+  .cal-day.is-wedding::before,
+  .cal-day.is-wedding::after {
+    inset: -24px -14px;
+  }
+
+  .timeline-item {
+    padding: 13px 14px;
+  }
+
+  .gallery-grid {
+    gap: 10px;
+  }
+}
